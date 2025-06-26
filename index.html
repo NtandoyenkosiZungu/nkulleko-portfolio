@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntandoyenkosi Zungu</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+    </nav>
+    <main>
+        <button class="navigate down" id="navigate"></button>
+
+        <section class="personal-info" id="section-one">
+            <div class="personal-details">
+                <div>
+                    <b>
+                        <i>Hello</i> my name is Ntandoyenkosi Zungu
+                    </b>
+                </div>
+                <div>
+                    I am a second year student at the University Of KwaZulu-Natal, aspirring software & web developer
+                </div>
+            </div>
+            <div class="profile-picture"></div>
+        </section>
+
+        <section class="projects" id="section-two">
+            <div class="project">
+
+                <div class="project-buttons">
+                    <button>View Project</button>
+                </div>
+            </div>
+
+            <div class="project">
+
+                <div class="project-buttons">
+                    <button>View Project</button>
+                </div>
+            </div>
+
+            <div class="project">
+
+                <div class="project-buttons">
+                    <button>View Project</button>
+                </div>
+            </div>
+
+            <div class="project">
+
+                <div class="project-buttons">
+                    <button>View Project</button>
+                </div>
+            </div>
+
+            <div class="project">
+
+                <div class="project-buttons">
+                    <button>View Project</button>
+                </div>
+            </div>
+
+            <div class="project">
+
+                <div class="project-buttons">
+                    <button>View Project</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const element = document.getElementById("section-one");
+    const elementTwo = document.getElementById("section-two");
+    const navButton =document.getElementById("navigate")
+
+    elementTwo.classList.toggle("collapsed")
+
+    navButton.addEventListener('click', ()=> {
+
+        element.classList.toggle("collapsed")
+        elementTwo.classList.toggle("collapsed")
+        elementTwo.classList.toggle("expanded")
+
+        if (navButton.classList.contains("down")){
+            navButton.classList.toggle("down");
+            navButton.classList.toggle("up")
+        } else {
+            navButton.classList.toggle("up");
+            navButton.classList.toggle("down")
+        }
+        console.log(navButton.classList)
+    })
+</script>
+</html>
